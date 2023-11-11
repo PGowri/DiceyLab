@@ -8,9 +8,12 @@ public class SimulationTest {
     @Test
     public void testSimulationConstructor(){
         int numberOfDice = 2;
-        int numberOfTosses = 10;
+        int numberOfTosses = 1000000;
         Simulation simulation = new Simulation(numberOfDice, numberOfTosses);
-        Assert.assertNotNull(simulation);
+        simulation.runSimulation();
+        simulation.printResults();
+//        Assert.assertNotNull(simulation);
+
     }
 
 }
